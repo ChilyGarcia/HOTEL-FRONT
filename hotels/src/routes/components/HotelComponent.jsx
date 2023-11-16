@@ -79,6 +79,14 @@ export const HotelComponent = ({ estadoSideBar }) => {
     pageNumbers.push(i);
   }
 
+
+  const handleEmpleados = () => {
+    window.location.href = "empleados";
+  }
+
+  const handleTraslados = () => {
+    window.location.href = "traslados";
+  }
   return (
     <>
       <table className={tableClassAudits}>
@@ -99,10 +107,10 @@ export const HotelComponent = ({ estadoSideBar }) => {
                 </td>
               ))}
               <td>
-                <button type="button">Empleados</button>
+                <button type="button" onClick={handleEmpleados}>Empleados</button>
               </td>
               <td>
-                <button type="button">Traslados</button>
+                <button type="button" onClick={handleTraslados}>Traslados</button>
               </td>
             </tr>
           ))}
