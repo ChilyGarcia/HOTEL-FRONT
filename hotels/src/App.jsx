@@ -5,9 +5,10 @@ import { LoginSignInScreen } from "./routes/LoginSignInScreen";
 import { HotelScreen } from "./routes/HotelScreen";
 
 import {  TrasladosScreen } from "./routes/TrasladosScreen";
-
 import { EmpleadosScreen } from "./routes/EmpleadosScreen";
 import { EmpleadoRestauranteScreen } from "./routes/EmpleadoRestauranteScreen";
+import { ModificarEmpleadoRestauranteScreen } from "./routes/ModificarEmpleadoRestauranteScreen";
+import { InformacionEmpleadoRestaurante } from "./routes/InformacionEmpleadoRestaurante";
 
 export const App = () => {
   return (
@@ -19,6 +20,8 @@ export const App = () => {
         <Route path="/hotel" element={<HotelScreen />}></Route>
         <Route path="/traslados" element={<TrasladosScreen />}></Route>
         <Route path="/empleado-rest" element={<EmpleadoRestauranteScreen />}></Route>
+        <Route path="/modificar-empleado-res" element={<ModificarEmpleadoRestauranteScreen/>}></Route>
+        <Route path="/info-restaurante" element={<InformacionEmpleadoRestaurante/>}/>
       </Routes>
     </>
   );

@@ -1,17 +1,18 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 import { PanelComponent } from "./components/PanelComponent";
-import { EmpleadoRestauranteComponent } from "./components/EmpleadoRestauranteComponent";
+import { ModificarEmpleadorRestaurante } from "./components/ModificarEmpleadorRestaurante";
 
-export const EmpleadoRestauranteScreen = () => {
+export const ModificarEmpleadoRestauranteScreen = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const enviarEstadoSideBar = (estado) => {
     setIsOpen(estado);
   };
+
   return (
     <>
       <PanelComponent enviarEstado={enviarEstadoSideBar}></PanelComponent>
-      <EmpleadoRestauranteComponent estadoSideBar={isOpen}></EmpleadoRestauranteComponent>
+      <ModificarEmpleadorRestaurante></ModificarEmpleadorRestaurante>
     </>
   );
 };
