@@ -5,6 +5,11 @@ import { SignInComponent } from "./SignInComponent";
 import { Link } from "react-router-dom";
 
 export const LogInComponent = () => {
+  const loginRest = {
+    email: "restaurante@gmail.com",
+    password: "restaurante123",
+  };
+
   const formRef = useRef();
 
   useEffect(() => {
@@ -23,6 +28,14 @@ export const LogInComponent = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     console.log(form);
+
+    if (email === loginRest.email) {
+      localStorage.setItem("rol", "restaurante");
+      window.location.href = "empleado-rest";
+    } else {
+      localStorage.setItem("rol", "administrador");
+      window.location.href = "empleados";
+    }
   };
 
   return (
@@ -93,15 +106,7 @@ export const LogInComponent = () => {
                               type="submit"
                               className={styles["btn"] + " mt-4"}
                             >
-                              <Link
-                                to="/hotel"
-                                style={{
-                                  color: "#6b1212",
-                                  textDecoration: "none",
-                                }}
-                              >
-                                Iniciar sesión
-                              </Link>
+                              Iniciar sesion
                             </button>
                           </form>
                         </div>
